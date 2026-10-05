@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Web<span>Maker</span></div>
+    <div class="toolbar">
+      <button id="previewBtn">Voorbeeld</button>
+      <button id="saveBtn" class="primary">Opslaan</button>
+      <button id="downloadBtn" class="primary">Website downloaden</button>
+    </div>
+  </header>
+
+  <main class="app">
+    <aside class="sidebar">
+      <h2>Onderdelen</h2>
+      <p class="muted">Klik om een blok toe te voegen.</p>
+
+      <button class="add-block" data-type="hero"><b>Hero</b><span>Grote titel + knop</span></button>
+      <button class="add-block" data-type="text"><b>Tekst</b><span>Tekstblok</span></button>
+      <button class="add-block" data-type="image"><b>Afbeelding</b><span>Afbeelding met URL</span></button>
+      <button class="add-block" data-type="button"><b>Knop</b><span>Call-to-action</span></button>
+      <button class="add-block" data-type="cards"><b>Kaarten</b><span>Drie informatiekaarten</span></button>
+      <button class="add-block" data-type="contact"><b>Contact</b><span>Contactgegevens</span></button>
+
+      <hr>
+      <button id="clearBtn" class="danger">Alles verwijderen</button>
+    </aside>
+
+    <section class="workspace">
+      <div class="canvas-wrap">
+        <div id="canvas" class="canvas"></div>
+      </div>
+    </section>
+
+    <aside class="properties">
+      <h2>Eigenschappen</h2>
+      <p id="emptyState" class="muted">Selecteer een onderdeel om het te bewerken.</p>
+
+      <div id="editor" hidden>
+        <label>Titel / tekst</label>
+        <textarea id="contentInput" rows="4"></textarea>
+
+        <label>Knoptekst</label>
+        <input id="buttonTextInput" type="text">
+
+        <label>Link</label>
+        <input id="linkInput" type="text" placeholder="https://...">
+
+        <label>Afbeelding URL</label>
+        <input id="imageInput" type="text" placeholder="https://...">
+
+        <label>Achtergrondkleur</label>
+        <input id="bgInput" type="color" value="#ffffff">
+
+        <label>Tekstkleur</label>
+        <input id="colorInput" type="color" value="#111827">
+
+        <button id="deleteBtn" class="danger full">Onderdeel verwijderen</button>
+      </div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
